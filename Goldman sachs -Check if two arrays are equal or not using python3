@@ -1,0 +1,30 @@
+#Given two arrays A and B of equal size N, the task is to find if given arrays are equal or not. 
+#Two arrays are said to be equal if both of them contain same set of elements, arrangements (or permutation) of 
+#elements may be different though.
+#Note : If there are repetitions, then counts of repeated elements must also be same for two array to be equal.
+
+#Input:
+#The first line of input contains an integer T denoting the no of test cases. Then T test cases follow.
+#Each test case contains 3 lines of input. The first line contains an integer N denoting the size of the array. 
+#The second line contains element of array A[]. The third line contains elements of the array B[].
+
+def isEqual(arr,arr1):
+    arr.sort()
+    arr1.sort()
+    if arr==arr1:
+        print("0")
+    else:
+        print("1")
+arr = []
+arr1 = []
+nele = int(input("Enter the loops"))
+for i in range(0,nele):
+    arrlen = int(input("Enter the length of array"))
+    for j in range(0,arrlen):
+        x  = int(input("Enter first array element"))
+        arr.append(x)
+    for k in range(0,arrlen):
+        y = int(input("Enter second array element"))
+        arr1.append(y)
+    isEqual(arr,arr1)
+
