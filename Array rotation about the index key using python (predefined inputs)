@@ -1,0 +1,22 @@
+Program for array rotation
+
+
+def test14(arr,key):
+    mainarr = []
+    for i in range(0,len(arr)):
+        for j in range(key+1,len(arr)):
+            mainarr.append(arr[j])
+        for k in range(0,key+1):
+            mainarr.append(arr[k])
+        break
+    print(mainarr)
+    
+    
+arr = [1,2,3,4,5]
+key = 3
+test14(arr,key)
+
+#this code has taken predefined inputs .
+#taken a key , by which the index is represented and the mainarr is filled with the output as per the program 
+#easiest method to remember the array rotation.
+#Devesh Singh Verma
