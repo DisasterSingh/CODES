@@ -1,0 +1,56 @@
+import math
+import os
+import random
+import re
+import sys
+
+def countApplesAndOranges(s, t, a, b, apples, oranges):
+    count = 0
+    count1 = 0
+    arr1 = []
+    arr2 = []
+    for i in range(0,len(apples)):
+        arr1.append(a+apples[i])
+    
+   
+    for i in range(0,len(oranges)):
+        arr2.append(b+oranges[i])
+    
+    for i in range(0,len(arr1)):
+        if arr1[i] >= s and arr1[i]<=t:
+            count  = count+1
+    print(count)
+    for i in range(0,len(arr2)):
+        if arr2[i] >= s and arr2[i]<=t:
+            count1 = count1+1
+    print(count1)
+    
+
+if __name__ == '__main__':
+    st = input().split()
+
+    s = int(st[0])
+
+    t = int(st[1])
+
+    ab = input().split()
+
+    a = int(ab[0])
+
+    b = int(ab[1])
+
+    mn = input().split()
+
+    m = int(mn[0])
+
+    n = int(mn[1])
+
+    apples = list(map(int, input().rstrip().split()))
+
+    oranges = list(map(int, input().rstrip().split()))
+
+    countApplesAndOranges(s, t, a, b, apples, oranges)
+
+
+
+
