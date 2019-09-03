@@ -1,0 +1,45 @@
+#!/bin/python3
+
+import os
+import sys
+
+def getMoneySpent(k, d, b):
+   arr = []
+   arr1 = []
+   arr2 =[]
+   for i in range(0,len(k)):
+       for j in range(0,len(d)):
+           if k[i]+d[j]<=b:
+               arr.append(k[i]+d[j])
+           elif k[i]+d[j]>b:
+               arr2.append(k[i]+d[j])
+    
+   if len(arr)==0:
+       print('-1')
+   else:
+       print(max(arr))
+               
+   
+       
+   
+           
+            
+if __name__ == '__main__':
+    
+
+    bnm = input().split()
+
+    b = int(bnm[0])
+
+    n = int(bnm[1])
+
+    m = int(bnm[2])
+
+    k = list(map(int, input().rstrip().split()))
+
+    d = list(map(int, input().rstrip().split()))
+
+  
+    moneySpent = getMoneySpent(k, d, b)
+
+    
