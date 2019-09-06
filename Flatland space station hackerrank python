@@ -1,0 +1,37 @@
+#!/bin/python3
+
+import math
+import os
+import random
+import re
+import sys
+
+# Complete the flatlandSpaceStations function below.
+def flatlandSpaceStations(n, c):
+   arr2 = []
+   for i in range(0,n):
+      # print(i)
+       arr3 = []
+       for j in range(0,len(c)):
+           arr3.append(abs(i-c[j]))
+          # print(arr3)
+      # print("min__>",min(arr3))
+       arr2.append(min(arr3))
+   print(max(arr2))
+       
+
+
+if __name__ == '__main__':
+
+
+    nm = input().split()
+
+    n = int(nm[0])
+
+    m = int(nm[1])
+
+    c = list(map(int, input().rstrip().split()))
+
+    result = flatlandSpaceStations(n, c)
+
+ 
