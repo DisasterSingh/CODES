@@ -1,0 +1,52 @@
+#!/bin/python3
+
+import math
+import os
+import random
+import re
+import sys
+
+# Complete the serviceLane function below.
+def serviceLane(n, cases,width):
+   
+    arr1= []
+    arr2 = []
+    for i in range(0,len(cases)):
+        
+           # print(cases[i][j])
+            arr1.append(cases[i][0])
+            arr1.append(cases[i][1])
+            
+            print(arr1)
+            x = arr1[0]
+            y = arr1[-1]
+            print("min-",x,"max-",y)
+            
+            for key in range(x,y+1):
+                
+                x = width[key]
+                arr2.append(x)
+            print(min(arr2))
+            arr2 = []
+            arr1= []
+        
+
+if __name__ == '__main__':
+    
+
+    nt = input().split()
+
+    n = int(nt[0])
+
+    t = int(nt[1])
+
+    width = list(map(int, input().rstrip().split()))
+
+    cases = []
+
+    for _ in range(t):
+        cases.append(list(map(int, input().rstrip().split())))
+
+    result = serviceLane(n, cases,width)
+
+    
