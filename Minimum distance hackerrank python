@@ -1,0 +1,32 @@
+#!/bin/python3
+
+import math
+import os
+import random
+import re
+import sys
+
+# Complete the minimumDistances function below.
+def minimumDistances(a):
+    arr = []
+    ans = 99999999
+    for i in range(0,len(a)):
+        for j in range(0,len(a)):
+            if a[i]==a[j] and i !=j:
+                ans = min(ans, abs(i - j))
+
+    if ans == 99999999:
+        ans = -1
+    print (ans)
+ 
+ 
+if __name__ == '__main__':
+ 
+
+    n = int(input())
+
+    a = list(map(int, input().rstrip().split()))
+
+    result = minimumDistances(a)
+
+  
