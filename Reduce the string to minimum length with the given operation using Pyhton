@@ -1,0 +1,28 @@
+#Given a string str consisting of lowercase and uppercase characters, 
+#the task is to find the minimum possible length the string can be reduced to after
+#performing the given operation any number of times.
+#In a single operation, any two consecutive characters can be removed 
+#if they represent the same character in different cases 
+#i.e. “aA” and “Cc” can be removed but “cc” and “EE” cannot be removed.
+
+
+def test(t):
+  tlist= t.lower()
+  tlist = list(tlist)
+  stack = ['#']
+  count = 0
+  for i in range(0,len(tlist)):
+      #print(stack[-1])
+      if tlist[i]!=stack[-1]:
+          stack.append(tlist[i])
+      elif tlist[i]==stack[-1]:
+          stack.pop()
+          count = count+1
+     # print(stack)
+  print(count)
+         
+if __name__=="__main__":
+    t  = input()
+    result = test(t)
+
+
